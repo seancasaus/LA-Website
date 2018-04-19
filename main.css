@@ -43,3 +43,27 @@ h5.modal-title {
 .modalFormWrapper {
     padding: 2rem;
 }
+
+.imgCenter {
+    display: block;
+    margin: auto;
+    padding: 2rem;
+}
+
+.btnCenter {
+    display: block;
+    margin: auto;
+    background-color: #f30000; /*cali flag red*/
+    color: #ffffff;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+/*Changes beaches button size to 25% when it is in the medium screen size*/
+@media screen and (min-width: 769px) {
+    @media screen and (max-width: 992px) {
+        .btnCenterWidth {
+            width: 25%;
+        }
+    }
+}
