@@ -65,5 +65,9 @@ h5.modal-title {
         .btnCenterWidth {
             width: 25%;
         }
+
+        .imgCenter2 {
+            width: 50%;
+        }
     }
 }
