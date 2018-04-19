@@ -35,3 +35,11 @@ img.calFlag {
     margin-left: auto;
     margin-right: auto;
 }
+
+h5.modal-title {
+    margin: auto;
+}
+
+.modalFormWrapper {
+    padding: 2rem;
+}

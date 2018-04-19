@@ -144,14 +144,78 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="caliButtonWrapper">
-              <button type="button" class="btn btn-lg caliBtn">
-                Learn More!
+              <button type="button" class="btn btn-lg caliBtn" data-toggle="modal" data-target="#signUpModal">
+                Sign Up!
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!--######Modals######-->
+    
+    <!--sign up modal-->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--modal header-->
+          <div class="modal-header">
+            <h5 class="modal-title" id="contentLabel">Sign Up to Plan Your Stay Today!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <!--img-->
+              <div class="row">
+                <div class="col-sm-12">
+                  <img class="img-fluid" src="assets/laModal.jpg">
+                </div>
+              </div>
+              <!--Form-->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="modalFormWrapper">
+                    <form>
+                        <div class="form-group">
+                          <label for="formName">What's your name?</label>
+                          <input type="text" class="form-control" id="formName" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="formEmail">What's your email?</label>
+                          <input type="text" class="form-control" id="formEmail" placeholder="Email">
+                        </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#confirmModal">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--confirm sign up modal-->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contentLabel">Thank You For Signing Up!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
