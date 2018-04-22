@@ -16,21 +16,21 @@
 <body>
   <!--Nav Bar-->
   <div class="container-fluid>">
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Los Angeles</a>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">Los Angeles</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#thingsToDo">What To Do</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Videos</a>
+            <a class="nav-link" href="#">Where To Stay</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Photos</a>
+            <a class="nav-link" href="#">Photo Gallery</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -157,15 +157,17 @@
     <!--section 3-->
     <div class="sectionLight">
       <!--Things to Do-->
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="jumbotron jumbotron-fluid">
-              <div class="container">
-                <h1 class="display-4">Things to Do</h1>
+      <a id="thingsToDo">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Things to Do</h1>
+                </div>
               </div>
-            </div>
+          </div>
         </div>
-      </div>
+      </a>
       <!--Sub Setions-->
       <div class="row">
         <!--outer row-->
@@ -176,7 +178,7 @@
               <img class="img-fluid imgCenter" src="assets/hikingSquare.jpg">
               <div class="row">
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-lg btnCenter">Hiking</button>
+                  <button type="button" class="btn btn-lg btnCenter" data-toggle="modal" data-target=".hiking-modal-lg">Hiking</button>
                 </div>
               </div>
             </div>
@@ -185,16 +187,16 @@
               <img class="img-fluid imgCenter" src="assets/hollyWoodSquare.jpg">
               <div class="row">
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-lg btnCenter">Attractions</button>
+                  <button type="button" class="btn btn-lg btnCenter" data-toggle="modal" data-target=".attractions-modal-lg">Attractions</button>
                 </div>
               </div>
             </div>
             <!--1/3 of row in lrg, 1 row in md, 1 row in sm-->
             <div class="col-sm-12 col-lg-4">
-              <img class="img-fluid imgCenter2 imgCenter" src="assets/beachesSquare.jpg">
+              <img class="img-fluid imgCenterMed imgCenter" src="assets/beachesSquare.jpg">
               <div class="row">
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-lg btnCenterWidth btnCenter">Beaches</button>
+                  <button type="button" class="btn btn-lg btnCenterWidth btnCenter" data-toggle="modal" data-target=".beaches-modal-lg">Beaches</button>
                 </div>
               </div>
             </div>
@@ -204,69 +206,123 @@
     </div>
   </div>
 
-    <!--######Modals######-->
-    
-    <!--sign up modal-->
-    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <!--modal header-->
-          <div class="modal-header">
-            <h5 class="modal-title" id="contentLabel">Sign Up to Get the Latest News!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <!--img-->
-              <div class="row">
-                <div class="col-sm-12">
-                  <img class="img-fluid" src="assets/laModal.jpg">
-                </div>
+  <!--######Modals######-->
+  
+  <!--sign up modal-->
+  <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!--modal header-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="contentLabel">Sign Up to Get the Latest News!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <!--img-->
+            <div class="row">
+              <div class="col-sm-12">
+                <img class="img-fluid" src="assets/laModal.jpg">
               </div>
-              <!--Form-->
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="modalFormWrapper">
-                    <form>
-                        <div class="form-group">
-                          <label for="formName">What's your name?</label>
-                          <input type="text" class="form-control" id="formName" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                          <label for="formEmail">What's your email?</label>
-                          <input type="text" class="form-control" id="formEmail" placeholder="Email">
-                        </div>
-                      </form>
-                  </div>
+            </div>
+            <!--Form-->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="modalFormWrapper">
+                  <form>
+                      <div class="form-group">
+                        <label for="formName">What's your name?</label>
+                        <input type="text" class="form-control" id="formName" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="formEmail">What's your email?</label>
+                        <input type="text" class="form-control" id="formEmail" placeholder="Email">
+                      </div>
+                    </form>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#confirmModal">Sign Up</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#confirmModal">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--confirm sign up modal-->
+  <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contentLabel">Thank You For Signing Up!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Hiking Modal-->
+  <div class="modal fade hiking-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header videoHeader">
+        <h5>Here are some ideas for hiking during your stay!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-content">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Zu9yK5jQeGE" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Attractions Modal-->
+  <div class="modal fade attractions-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-header videoHeader">
+          <h5>There is lots to see in LA, here are some popular attractions!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-content">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jtrF479Dzj4" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
 
-    <!--confirm sign up modal-->
-    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="contentLabel">Thank You For Signing Up!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+  <!--Beaches Modal-->
+  <div class="modal fade beaches-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header videoHeader">
+        <h5>Here are the best beaches within a few hours of LA!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-content">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xEfmjaDOHck" allowfullscreen></iframe>
         </div>
       </div>
+    </div>
+  </div>
 
 
 

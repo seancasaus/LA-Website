@@ -59,14 +59,28 @@ h5.modal-title {
     width: 50%;
 }
 
+.thingsToDoDesc {
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color: #f30000;/*cali flag red*/
+}
+
+.videoHeader {
+    background-color: #ffffff;
+    text-align: center;
+    color: #f30000;/*cali flag red*/
+}
+
 /*Changes beaches button size to 25% when it is in the medium screen size*/
+/*changes beaches image to 50 when in the medium screen size*/
 @media screen and (min-width: 769px) {
     @media screen and (max-width: 992px) {
         .btnCenterWidth {
             width: 25%;
         }
 
-        .imgCenter2 {
+        .imgCenterMed {
             width: 50%;
         }
     }
