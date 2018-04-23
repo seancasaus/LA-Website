@@ -72,6 +72,30 @@ h5.modal-title {
     color: #f30000;/*cali flag red*/
 }
 
+.laFooterWrapper {
+    margin: auto;
+}
+
+.socialWrapper {
+    margin: auto; 
+}
+
+.fa {
+    margin: 10px;
+}
+
+.fa-facebook-square {
+    color: #3b60b8; /*facebook blue*/
+}
+
+.fa-google-plus-square {
+    color: #f03021; /*google red-orange*/
+}
+
+.fa-instagram {
+    color: #ffffff;
+}
+
 /*Changes beaches button size to 25% when it is in the medium screen size*/
 /*changes beaches image to 50 when in the medium screen size*/
 @media screen and (min-width: 769px) {
@@ -83,5 +107,23 @@ h5.modal-title {
         .imgCenterMed {
             width: 50%;
         }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .laFooterWrapper {
+        text-align: center;
+    }
+
+    .socialWrapper {
+        text-align: center;
+    }
+
+    img.californiaState {
+        width: 50%;
+    }
+
+    img.calFlag {
+        width: 50%;
     }
 }
